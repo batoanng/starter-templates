@@ -1,0 +1,102 @@
+$colors: (
+        'red':$color-red,
+        'mahogany': $color-mahogany,
+        'shamrock': $color-shamrock,
+        'black': $color-black,
+        'white': $color-white,
+        'white-smoke': $color-white-smoke,
+        'white-smoke-2': $color-white-smoke-2,
+        'white-smoke-3': $color-white-smoke-3,
+        'manatee': $color-manatee,
+        'gray': $color-gray,
+        'silver': $color-silver,
+        'lightning-yellow': $color-lightning-yellow,
+        'sunglow': $color-sunglow,
+        'wild-watermelon': $color-wild-watermelon,
+        'mortar': $color-mortar,
+        'mountain-meadow': $color-mountain-meadow,
+        'lavender-blue': $color-lavender-blue,
+        'dodger-blue': $color-dodger-blue,
+        'portage': $color-portage,
+);
+
+@each $key, $value in $colors {
+    .btn-#{$key} {
+        background-color: $value !important;
+        color: #fff;
+
+        &:hover {
+            background-color: lighten($value, 5) !important;
+        }
+    }
+    .btn-outline-#{$key} {
+        background-color: $color-white;
+        color: $value !important;
+        border: 1px solid $value !important;
+
+        &:hover {
+            background-color: lighten($value, 5) !important;
+        }
+    }
+
+    .text-#{$key} {
+        color: $value !important;
+    }
+
+    .bg-#{$key} {
+        background-color: $value !important;
+    }
+
+    .border-#{$key} {
+        border-color: $value !important;
+    }
+}
+
+.btn-rounded {
+    border-radius: 10rem !important;
+}
+
+.btn-tiny {
+    padding: .1rem .75rem;
+    font-size: map-get($font-sizes, xs);
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis !important;
+}
+
+@each $key, $value in $font-sizes {
+    .text-#{$key} {
+        font-size: $value !important;
+    }
+}
+
+@each $key, $value in $spacers {
+    .top-#{$key} {
+        top: $value !important;
+    }
+
+    .left-#{$key} {
+        left: $value !important;
+    }
+
+    .right-#{$key} {
+        right: $value !important;
+    }
+
+    .bottom-#{$key} {
+        bottom: $value !important;
+    }
+}
+
+.cursor-default {
+    cursor: default !important;
+}

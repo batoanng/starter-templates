@@ -1,0 +1,13 @@
+.home {
+  font-family: 'Cosi-Azure', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  @include flex-column-center();
+  background: $color-black;
+
+  .hello {
+    margin-top: 2rem;
+    color: $color-white;
+  }
+
+}

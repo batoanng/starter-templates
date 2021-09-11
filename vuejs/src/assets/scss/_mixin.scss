@@ -1,0 +1,46 @@
+@mixin scroll-bar($color) {
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: none;
+        background-color: $color;
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin object-fit($value) {
+    object-fit: $value;
+    -o-object-fit: $value;
+}
+
+@mixin image-center {
+    @include object-fit(cover);
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
