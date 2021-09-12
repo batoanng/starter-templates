@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+    margin: 0;
+    padding: 0;
+    font-size: map-get($font-sizes, xl);
+}
+
+a {
+    text-decoration: none;
+    cursor: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}

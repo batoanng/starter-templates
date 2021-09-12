@@ -1,0 +1,52 @@
+$spacer: 1rem !default;
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3)
+);
+
+$gap: 60px;
+
+// Colors
+$color-red: #f50000;
+$color-red-orange: #fa3939;
+$color-mahogany: #CD3E3E;
+$color-white: #fff;
+$color-white-smoke: #eee;
+$color-white-smoke-2: #f7f7f7;
+$color-white-smoke-3: #f9f9f9;
+$color-white-smoke-4: #e9e9e9;
+$color-solitude: #f7f9fA;
+$color-dark-gray: #aaaaaa;
+$color-grey: #777777;
+$color-gray: #8A8A8A;
+$gray-400: #ced4da;
+$color-gainsboro: #E2E2E2;
+$color-manatee: #8a8f99;
+$color-silver: #B6B6B6;
+$color-night-rider: #333;
+$color-mortar: #585858;
+$color-black: #000;
+$color-tickle-me-pink: #FD809E;
+$color-wild-watermelon: #FF5783;
+$color-razzmatazz: #D60C60;
+$color-crusta: #F3836A;
+$color-lightning-yellow: #F8961D;
+$color-turbo: #F5C615;
+$color-moon-yellow: #F3B519;
+$color-dandelion: #FFCF58;
+$color-sunglow: #FFC121;
+$color-shamrock: #2AC583;
+$color-mountain-meadow: #2AC583;
+$color-bermuda: #7CD1AA;
+$color-deep-sea: #109758;
+$color-lavender-blue: #B9CDFF;
+$color-dodger-blue: #0094FF;
+$color-portage: #8787D7;
+
+$primary: $color-moon-yellow;
+$secondary: $color-sunglow;
+$danger: $color-mahogany;
