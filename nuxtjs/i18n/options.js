@@ -21,6 +21,7 @@ export default {
     fallbackLocale: 'en',
     messages: {
       en,
+      vi,
     },
   },
 };
