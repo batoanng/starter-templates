@@ -1,35 +1,3 @@
-@font-face {
-  font-family: 'Cosi-Azure';
-  src: local('Cosi-Azure-Black'),
-  url('~@/assets/fonts/Cosi-Azure/Cosi-Azure-Black.otf');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Cosi-Azure';
-  src: local('Cosi-Azure-Bold'),
-  url('~@/assets/fonts/Cosi-Azure/Cosi-Azure-Bold.otf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Cosi-Azure';
-  src: local('Cosi-Azure-Ultra'),
-  url('~@/assets/fonts/Cosi-Azure/Cosi-Azure-Ultra.otf');
-  font-weight: 800;
-}
-
-$font-main: 'Cosi-Azure', sans-serif;
-
-$font-sizes: (
-        xs: 11px,
-        sm: 13px,
-        md: 14px,
-        lg: 16px,
-        xl: 22px,
-        xxl: 35px,
-);
-
 $spacer: 1rem !default;
 $spacers: (
         0: 0,
