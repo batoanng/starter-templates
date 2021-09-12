@@ -17,9 +17,7 @@ const i18n = new VueI18n(langOptions);
 const router = createRouter();
 router.beforeEach((to, from, next) => {
     const lang = to.query.lang;
-    if (lang) {
-        i18n.locale = lang;
-    }
+    i18n.locale = lang || langOptions.defaultLocale;
 
     return next();
 });
