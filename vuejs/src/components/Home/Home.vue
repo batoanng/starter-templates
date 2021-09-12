@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img :src="require('@/assets/images/logo.png')" alt="Logo" />
-    <h1 class="hello">Hello</h1>
+    <h1 class="hello">{{ $t('home.hello') }}</h1>
   </div>
 </template>
 

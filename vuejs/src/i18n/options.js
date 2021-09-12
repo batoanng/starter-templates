@@ -3,6 +3,7 @@ import vi from '../i18n/locales/vi';
 
 export default {
     defaultLocale: 'en',
+    fallbackLocale: 'en',
     locales: [
         {
             code: 'en',
@@ -13,11 +14,8 @@ export default {
             name: 'Vietnamese',
         },
     ],
-    vueI18n: {
-        fallbackLocale: 'en',
-        messages: {
-            en,
-            vi,
-        },
+    messages: {
+        en,
+        vi,
     },
 };
