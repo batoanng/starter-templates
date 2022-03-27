@@ -19,10 +19,20 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "outDir": "./build"
+    "outDir": "./build",
+      "noImplicitAny": false,
+      "noImplicitThis": false,
+      "noImplicitReturns": false,
+      "importHelpers": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "suppressExcessPropertyErrors": true,
+      "noUnusedLocals": false,
+      "noEmitOnError": true,
+      "traceResolution": false
   },
-  "include": [
-    "src"
+    "include": [
+      "src",
+      "node_modules/@types/jest/index.d.ts"
   ],
   "exclude": ["node_modules", "build"]
 }

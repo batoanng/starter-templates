@@ -9,5 +9,4 @@ temp
 *.d.js
 *.config.js
 sonarQube.js
-config-overrides.js
-setupTests.js
+**/setupTests.ts
