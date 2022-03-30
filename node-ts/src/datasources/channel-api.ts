@@ -13,8 +13,7 @@ class ChannelAPI extends RESTDataSource {
         // Always call super()
         super();
         // Sets the base URL for the REST API
-        this.baseURL =
-            process.env.CHANNEL_API_URL || "http://localhost:3008/channels";
+        this.baseURL = process.env.CHANNEL_API_URL || "http://localhost:3008";
     }
 
     /**
