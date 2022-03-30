@@ -3,11 +3,15 @@ import { IDatasources } from "../datasources";
 const resolvers = {
     Query: {
         channels: async (
-            t: any,
-            t2: any,
+            _1: any,
+            _2: any,
             { dataSources }: { dataSources: IDatasources }
         ) => {
-            return await dataSources.channelAPI.getChannels();
+            try {
+                return await dataSources.channelAPI.getChannels();
+            } catch (e) {
+                console.error(e);
+            }
         },
     },
 };
