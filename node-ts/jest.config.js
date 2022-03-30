@@ -2,7 +2,7 @@ module.exports = {
     roots: ["<rootDir>/src"],
     collectCoverage: true,
     transform: {
-        "^.+\\.jsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+        "^.+\\.ts?$": "ts-jest",
     },
     testRegex: [
         "((__tests__|test)/(?!__mocks__).*|(\\.|/)(test|spec))\\.(tsx|ts)?$",
