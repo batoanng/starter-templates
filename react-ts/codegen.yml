@@ -1,0 +1,19 @@
+# Best practices: https://www.the-guild.dev/blog/graphql-codegen-best-practices
+
+overwrite: true
+schema:
+    - '../node-ts/src/schema/schema.ts'
+documents: './src/**/*.graphql'
+generates:
+    ./src/generated/graphql.tsx:
+        config:
+            withHooks: true
+            withHOC: true
+            withComponent: true
+        plugins:
+            - 'typescript'
+            - 'typescript-operations'
+            - 'typescript-react-apollo'
+    ./graphql.schema.json:
+        plugins:
+            - 'introspection'
