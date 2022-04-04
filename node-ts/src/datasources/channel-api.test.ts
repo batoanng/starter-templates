@@ -1,35 +1,35 @@
-import ChannelAPI from "./channel-api";
+import ChannelAPI from './channel-api';
 
 const mockGet = jest.fn().mockResolvedValue([
     {
-        name: "",
-    },
+        name: ''
+    }
 ]);
 
-jest.mock("apollo-datasource-rest", () => {
+jest.mock('apollo-datasource-rest', () => {
     class MockRESTDataSource {
-        baseUrl = "";
+        baseUrl = '';
         get = mockGet;
     }
 
     return {
-        RESTDataSource: MockRESTDataSource,
+        RESTDataSource: MockRESTDataSource
     };
 });
 
-describe("Channel data source", () => {
+describe('Channel data source', () => {
     const dataSource = new ChannelAPI();
 
     afterEach(() => {
         jest.resetAllMocks();
     });
 
-    it("Should be calling the channels to get channel data from API", async () => {
+    it('Should be calling the channels to get channel data from API', async () => {
         expect(dataSource).toBeTruthy();
 
         await dataSource.getChannels();
 
         expect(mockGet).toHaveBeenCalledTimes(1);
-        expect(mockGet).toHaveBeenCalledWith("/channels");
+        expect(mockGet).toHaveBeenCalledWith('/channels');
     });
 });

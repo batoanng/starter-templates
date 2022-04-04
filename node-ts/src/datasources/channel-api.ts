@@ -1,4 +1,4 @@
-import { RESTDataSource } from "apollo-datasource-rest";
+import { RESTDataSource } from 'apollo-datasource-rest';
 
 interface Channel {
     name: string;
@@ -13,7 +13,7 @@ class ChannelAPI extends RESTDataSource {
         // Always call super()
         super();
         // Sets the base URL for the REST API
-        this.baseURL = process.env.CHANNEL_API_URL || "http://localhost:3008";
+        this.baseURL = process.env.CHANNEL_API_URL || 'http://localhost:3008';
     }
 
     /**
@@ -26,10 +26,10 @@ class ChannelAPI extends RESTDataSource {
 
     public async getChannels() {
         try {
-            const channels: RawChannelResponse[] = await this.get("/channels");
+            const channels: RawChannelResponse[] = await this.get('/channels');
             return channels.map(this.channelReducer);
         } catch (e) {
-            console.error("Cannot fetch channels", e);
+            console.error('Cannot fetch channels', e);
         }
     }
 }

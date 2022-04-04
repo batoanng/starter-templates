@@ -1,37 +1,35 @@
-import { resolvers } from "./resolvers";
+import { resolvers } from './resolvers';
 
-jest.spyOn(global.console, "error");
+jest.spyOn(global.console, 'error');
 
 const mockGetChannelsResolve = jest.fn();
 const mockGetChannelsReject = jest.fn();
 
-describe("Resolvers", () => {
-    describe("Success queries", () => {
+describe('Resolvers', () => {
+    describe('Success queries', () => {
         const dataSources = {
             channelAPI: {
-                getChannels: mockGetChannelsResolve.mockResolvedValue([
-                    { name: "channel 1" },
-                ]),
-            },
+                getChannels: mockGetChannelsResolve.mockResolvedValue([{ name: 'channel 1' }])
+            }
         };
 
-        it("Query - channels", async () => {
+        it('Query - channels', async () => {
             await resolvers.Query.channels(undefined, undefined, {
-                dataSources,
+                dataSources
             } as any);
             expect(dataSources.channelAPI.getChannels).toBeCalled();
         });
     });
 
-    describe("Errors", () => {
+    describe('Errors', () => {
         const dataSources = {
             channelAPI: {
-                getChannels: mockGetChannelsReject.mockRejectedValue([]),
-            },
+                getChannels: mockGetChannelsReject.mockRejectedValue([])
+            }
         };
-        it("Query - channels", async () => {
+        it('Query - channels', async () => {
             await resolvers.Query.channels(undefined, undefined, {
-                dataSources,
+                dataSources
             } as any);
             expect(console.error).toHaveBeenCalledTimes(1);
         });

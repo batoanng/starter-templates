@@ -1,5 +1,5 @@
-import depthLimit from "graphql-depth-limit";
-import { GraphQLExtension } from "graphql-extensions";
+import depthLimit from 'graphql-depth-limit';
+import { GraphQLExtension } from 'graphql-extensions';
 
 const MAX_QUERY_DEPTH = 3;
 
@@ -14,9 +14,9 @@ const graphQLExtensions: () => GraphQLExtension = () => ({
     },
     willSendResponse(response) {
         console.log(`Request ended at ${new Date()}, with response`, {
-            data: response.graphqlResponse.data,
+            data: response.graphqlResponse.data
         });
-    },
+    }
 });
 
 export { depthLimitValidator, graphQLExtensions };
