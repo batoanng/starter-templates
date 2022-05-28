@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  RECEIVED
+  QUOTED
+  BOOKED
+  CANCELLED
+}
+
+enum Carrier {
+  UPS
+  FEDEX
+  USPS
+}
+
+model Item {
+  id           Int         @id @default(autoincrement())
+  sku          String
+  quantity     Int
+  gramsPerItem Float
+  price        Float
+  SalesOrder   SalesOrder? @relation(fields: [salesOrderId], references: [id])
+  salesOrderId String?
+}
+
+model Quote {
+  id           Int         @id @default(autoincrement())
+  carrier      Carrier[]
+  priceCents   Float
+  SalesOrder   SalesOrder? @relation(fields: [salesOrderId], references: [id])
+  salesOrderId String?
+}
+
+model SalesOrder {
+  id               String   @unique
+  customer         String
+  status           Status
+  items            Item[]
+  carrierPricePaid Float?
+  carrierBooked    Carrier?
+  quotes           Quote[]
+}

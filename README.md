@@ -1,12 +1,13 @@
 # Starter templates
 This project contains framework templates which help you initialize your project. 
 1. [React-TS](#react-ts)
-2. [Node-TS](#node-ts)
-3. [Next-JS](#next-js)
-4. [Vue-JS](#vue-js)
-5. [Nuxt-JS](#nuxt-js)
-6. [Infrastructure](#infrastructure)
-7. [Mock Server](#mock-server)
+2. [Node-TS-Webpack](#node-ts-webpack)
+3. [Node-TS](#node-ts)
+4. [Next-JS](#next-js)
+5. [Vue-JS](#vue-js)
+6. [Nuxt-JS](#nuxt-js)
+7. [Infrastructure](#infrastructure)
+8. [Mock Server](#mock-server)
 
 ## React-TS
 The template contains:
@@ -19,14 +20,25 @@ The template contains:
 6. styled-components
 7. prettier, eslint
 
+### Node-TS-Webpack
+The template contains:
+1. typescript
+2. express
+3. webpack: with configured bundle, babel, ts-loader, graphql
+4. graphql with extensions: graphql-depth-limit, apollo-server, graphql-tag
+   - example is linked with [Mock Server](#mock-server)
+5. jest
+6. prettier, eslint
+
 ### Node-TS
 The template contains:
 1. typescript
-2. webpack: with configured bundle, babel, ts-loader, graphql
-3. graphql with extensions: graphql-depth-limit, apollo-server, graphql-tag
-   - example is linked with [Mock Server](#mock-server)
-4. jest
-5. prettier, eslint
+2. express
+3. [prisma](https://www.prisma.io/): Typescript ORM.
+4. postgresql
+5. docker: contains postgresql image
+6. jest
+7. prettier, eslint
 
 ## Next-JS
 The template contains:
